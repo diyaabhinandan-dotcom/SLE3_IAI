@@ -1,0 +1,36 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontSize 10
+title SLE-3 Level 4 - Code Diagram: Dijkstra vs Greedy
+|Dijkstra|
+start
+:dijkstra(graph, start, goal);
+:pq = [(0, start, [start])];
+while (pq not empty?) is (yes)
+    :pop min-cost node;
+    if (is_goal?) then (yes)
+        :reconstruct_path();
+        :return_result();
+        stop
+    else (no)
+        :expand & update cost;
+    endif
+endwhile (no)
+stop
+|Greedy|
+start
+:greedy(graph, heuristic, start, goal);
+:pq = [(h[start], start, [start], 0)];
+while (pq not empty?) is (yes)
+    :pop min-h(n) node;
+    if (is_goal?) then (yes)
+        :reconstruct_path();
+        :return_result();
+        stop
+    else (no)
+        :expand & update visited;
+    endif
+endwhile (no)
+stop
+@enduml

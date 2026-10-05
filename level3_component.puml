@@ -1,0 +1,37 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+title SLE-3 Level 3 - Component Diagram: Dijkstra vs Greedy
+package "Dijkstra Search Engine" {
+    rectangle "Initialize\nFrontier & Cost Table" as d_init
+    rectangle "Pop Min-Cost Node" as d_pop
+    rectangle "Goal Test" as d_goal
+    rectangle "Reconstruct Path" as d_recon
+    rectangle "Expand Neighbours" as d_expand
+    rectangle "Update Cost Table\n& Visited" as d_update
+    rectangle "Return Result" as d_ret
+}
+package "Greedy Search Engine" {
+    rectangle "Initialize\nFrontier & Visited Set" as g_init
+    rectangle "Pop Min-h(n) Node" as g_pop
+    rectangle "Goal Test" as g_goal
+    rectangle "Reconstruct Path" as g_recon
+    rectangle "Expand Neighbours" as g_expand
+    rectangle "Update Visited Set" as g_update
+    rectangle "Return Result" as g_ret
+}
+d_init --> d_pop
+d_pop --> d_goal
+d_goal --> d_recon : Yes
+d_goal --> d_expand : No
+d_recon --> d_ret
+d_expand --> d_update
+d_update --> d_pop
+g_init --> g_pop
+g_pop --> g_goal
+g_goal --> g_recon : Yes
+g_goal --> g_expand : No
+g_recon --> g_ret
+g_expand --> g_update
+g_update --> g_pop
+@enduml

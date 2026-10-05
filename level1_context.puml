@@ -1,0 +1,9 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+title SLE-3 Level 1 - Context Diagram
+rectangle "USER" as user
+rectangle "WEIGHTED PATH SEARCH SYSTEM\nDijkstra Search / Greedy Search" as sys
+user --> sys : Graph + Start + Goal
+sys --> user : Path + Cost + Nodes Expanded
+@enduml

@@ -1,0 +1,48 @@
+# AI Contribution Log — SLE-3
+---
+
+## 1. Task-Wise Contribution Table
+
+| # | Task | Done By | AI's Role | My Role |
+|---|------|---------|-----------|---------|
+| 1 | Designing the weighted graph (8 nodes, A–H) | Me | — | Full design |
+| 2 | Creating the heuristic h(n) values | Me | — | Full design |
+| 3 | Writing `common.py`, `input_module.py`, `heuristic_module.py` | Me | — | Full code |
+| 4 | Writing `dijkstra_engine.py` | Me + AI | Suggested heapq structure | Customized logic, added node counter |
+| 5 | Writing `greedy_engine.py` | Me + AI | Suggested heapq structure | Customized logic, added visited set |
+| 6 | Writing `search_controller.py`, `memory.py`, `result_module.py`, `main.py` | Me | — | Full code |
+| 7 | Testing `python main.py` | Me | — | Ran and verified output |
+| 8 | Understanding C4 architecture | Me + AI | Explained Context / Container / Component / Code | Applied to my system |
+| 9 | Drawing 4 diagrams in PlantUML | Me + AI | Provided PlantUML syntax | Designed layout, rendered PNGs |
+| 10 | Writing the report (`.docx`) | Me + AI | Suggested section order and wording | Wrote final content, inserted images |
+| 11 | Creating `README.md` and `.gitignore` | Me | — | Full authoring |
+| 12 | Creating this AI Contribution Log | Me | — | Full authoring |
+| 13 | Pushing to GitHub | Me | — | Full git workflow |
+
+---
+
+## 2. Contribution Percentage Summary
+
+| Contributor | Role | Approx. Contribution |
+|-------------|------|---------------------|
+| **Me (Student)** | Design, coding, testing, diagrams, documentation | **~85%** |
+| **AI (Claude / ChatGPT)** | Syntax help, structure suggestions, wording | **~15%** |
+
+---
+
+## 3. What AI Did NOT Do
+
+| Task | Status |
+|------|--------|
+| Design the graph | ❌ Not done by AI |
+| Choose heuristic values | ❌ Not done by AI |
+| Run the code | ❌ Not done by AI |
+| Generate the diagrams (only syntax was provided) | ❌ Not done by AI |
+| Write the final report | ❌ Not done by AI |
+| Push to GitHub | ❌ Not done by AI |
+
+---
+
+## 4. Honest Declaration
+
+I used Claude and ChatGPT as **learning assistants** — for understanding the C4 model, getting PlantUML syntax, and suggesting report structure. Every line of code was written and tested by me. Every diagram was rendered by me. Every section of the report was written in my own words.

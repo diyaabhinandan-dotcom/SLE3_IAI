@@ -1,0 +1,25 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+title SLE-3 Level 2 - Container Diagram
+rectangle "USER" as user
+package "Weighted Path Search System" {
+    rectangle "Input Module" as input
+    rectangle "Search Controller" as controller
+    rectangle "Heuristic Module" as heuristic
+    rectangle "Dijkstra Search Engine" as dijkstra
+    rectangle "Greedy Search Engine" as greedy
+    rectangle "Visited / Cost Memory" as memory
+    rectangle "Result Module" as result
+}
+user --> input
+input --> controller
+controller --> heuristic
+controller --> dijkstra
+controller --> greedy
+dijkstra --> memory
+greedy --> memory
+dijkstra --> result
+greedy --> result
+result --> user
+@enduml
